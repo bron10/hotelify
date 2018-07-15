@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "67f0a96c-f04c-43f6-928d-40837672b03b",
+		"name": "hotelify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/hotels/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"king\",\n    \"address\" : \"US\",\n    \"phno\" : 12212121212,\n    \"status\" : true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/hotels/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"hotels",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all hotels",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"king\",\n    \"address\" : \"US\",\n    \"phno\" : 12212121212,\n    \"status\" : true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/hotels/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"hotels",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update hotel details",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"queen\",\n    \"address\" : \"CA\",\n    \"phno\" : 12212121212,\n    \"status\" : false\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/hotels/5b483ff639c69d7c43028e92",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"hotels",
+						"5b483ff639c69d7c43028e92"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new room",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"new_rooms\" : [205,1002,234],\n    \"type\": \"queen\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/rooms/5b483ff639c69d7c43028e92/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rooms",
+						"5b483ff639c69d7c43028e92",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select room by range",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"booked_from\" : \"2018-07-10T06:00:22.268Z\",\n    \"booked_to\" : \"2018-07-15T06:00:22.268Z\",\n    \"status\" : true,\n    \"type\": \"deluxe\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/rooms/5b483ff639c69d7c43028e92/all?start_date=2018-07-10T06:00:22.268Z&end_date=2018-07-20T00:00:22.268Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rooms",
+						"5b483ff639c69d7c43028e92",
+						"all"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2018-07-10T06:00:22.268Z"
+						},
+						{
+							"key": "end_date",
+							"value": "2018-07-20T00:00:22.268Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"usename\" : \"billy\",\n    \"email_id\" : \"bill@example.com\",\n    \"phno\" : 9876543210,\n    \"password\" : \"bill123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"username\" : \"bill\",\n    \"phno\" : 9822222222,\n    \"status\" : false\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/5b4ae7e53219bf43b40f6060/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"5b4ae7e53219bf43b40f6060",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book a room by user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"booked_from\" : \"2018-07-12T06:00:22.268Z\",\n    \"booked_to\" : \"2018-07-17T06:00:22.268Z\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/bookings/5b48cdfa40493e44feb0611d/booked_by/5b4ae7e53219bf43b40f6060",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bookings",
+						"5b48cdfa40493e44feb0611d",
+						"booked_by",
+						"5b4ae7e53219bf43b40f6060"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
