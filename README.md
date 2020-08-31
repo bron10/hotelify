@@ -16,3 +16,9 @@ Prerequisites : mongodb process is running locally.
 ## Postman collection 
 The endpoints are provided as a postman collection.
 The postman collection is provided in above repository as filename `hotelify.postman_collection.json` . Import it and Enjoy scripting! 
+
+## TO DO
+ - Use Sequelize for data migrations
+ - Create services :`db`, `utils`
+ - Containerization
+  

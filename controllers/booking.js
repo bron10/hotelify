@@ -4,7 +4,6 @@ function Booking(){
 	const mongoDB = require('mongodb');
 	this.MongoClient = mongoDB.MongoClient;	
 
-	//console.log("this.MongoClient", mongoDB.ISODate)
 	return {
 		bookARoom(req, res){
 			const bookingData = req.body;
