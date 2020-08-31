@@ -9,11 +9,10 @@ Prerequisites : mongodb process is running locally.
 2. Run 'npm start' 
 
 ## using docs
-1. Use 'sudo npm install apidoc -g' to get api docs npm package globally
-2. Skip this step as doc folder is already present.run 'apidoc -i routes/' to update the documentation, else go to step 3.
-3. Go to http://localhost:3000/doc
+1. Use `sudo npm install apidoc -g` to get api docs npm package globally
+2. Skip this step as doc folder is already present.run `apidoc -i routes/` to update the documentation, else go to step 3.
+3. Go to `http://localhost:3000/doc`
 
 ## Postman collection 
 The endpoints are provided as a postman collection.
-The postman collection is provided in above repository as filename 'hotelify.postman_collection.json'
-Import it and Enjoy scripting! 
+The postman collection is provided in above repository as filename `hotelify.postman_collection.json` . Import it and Enjoy scripting! 
